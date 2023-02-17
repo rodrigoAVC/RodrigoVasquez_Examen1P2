@@ -26,98 +26,435 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        crud_PC = new javax.swing.JFrame();
-        jButton3 = new javax.swing.JButton();
+        crud_PC_Escritorio = new javax.swing.JFrame();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        tf_host = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        tf_ip = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        tf_marcaRed = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        tf_ram = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        tf_storage = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        tf_tipoStorage = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        bt_agregarEscritorio = new javax.swing.JButton();
+        crud_PC_Laptop = new javax.swing.JFrame();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        tf_host3 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        tf_host4 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        tf_host5 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        tf_host9 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        tf_host10 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        bt_agregarLaptop = new javax.swing.JButton();
+        crud_main = new javax.swing.JFrame();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        bt_crud = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        bt_crear = new javax.swing.JButton();
+        bt_listar = new javax.swing.JButton();
+        bt_eliminar = new javax.swing.JButton();
+        bt_salir = new javax.swing.JButton();
+        crud_choose = new javax.swing.JFrame();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        bt_PC_Escritorio = new javax.swing.JButton();
+        bt_PC_Laptop = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        bt_ingresar = new javax.swing.JButton();
+        bt_crudPC = new javax.swing.JButton();
 
-        jButton3.setText("Hola");
+        crud_PC_Escritorio.setPreferredSize(new java.awt.Dimension(415, 330));
+        crud_PC_Escritorio.setResizable(false);
+        crud_PC_Escritorio.setSize(new java.awt.Dimension(415, 330));
 
-        javax.swing.GroupLayout crud_PCLayout = new javax.swing.GroupLayout(crud_PC.getContentPane());
-        crud_PC.getContentPane().setLayout(crud_PCLayout);
-        crud_PCLayout.setHorizontalGroup(
-            crud_PCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(crud_PCLayout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addComponent(jButton3)
-                .addContainerGap(192, Short.MAX_VALUE))
+        jPanel7.setMaximumSize(new java.awt.Dimension(415, 330));
+        jPanel7.setMinimumSize(new java.awt.Dimension(415, 330));
+        jPanel7.setPreferredSize(new java.awt.Dimension(415, 330));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setText("Agregar PC de Escritorio");
+        jLabel3.setToolTipText("");
+        jPanel7.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 210, 50));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("Host:");
+        jLabel1.setToolTipText("");
+        jPanel7.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 50, 16));
+
+        tf_host.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_hostActionPerformed(evt);
+            }
+        });
+        jPanel7.add(tf_host, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 120, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setText("IP:");
+        jLabel4.setToolTipText("");
+        jPanel7.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 30, 20));
+        jPanel7.add(tf_ip, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 170, 30));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setText("Marca de Red:");
+        jLabel5.setToolTipText("");
+        jPanel7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 130, 20));
+        jPanel7.add(tf_marcaRed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 250, -1));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel10.setText("Capacidad de RAM:");
+        jLabel10.setToolTipText("");
+        jPanel7.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 170, 20));
+        jPanel7.add(tf_ram, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 210, -1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel11.setText("Capacidad de Almacenamiento:");
+        jLabel11.setToolTipText("");
+        jPanel7.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 270, 20));
+        jPanel7.add(tf_storage, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 100, -1));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel12.setText("Tipo de Almacenamiento:");
+        jLabel12.setToolTipText("");
+        jPanel7.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 220, 20));
+        jPanel7.add(tf_tipoStorage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 150, 30));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel13.setText("¿Tiene tarjeta gráfica?");
+        jLabel13.setToolTipText("");
+        jPanel7.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 190, -1));
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Si", "No" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jPanel7.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 60, 50));
+
+        bt_agregarEscritorio.setText("Agregar");
+        bt_agregarEscritorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_agregarEscritorioActionPerformed(evt);
+            }
+        });
+        jPanel7.add(bt_agregarEscritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, -1, -1));
+
+        javax.swing.GroupLayout crud_PC_EscritorioLayout = new javax.swing.GroupLayout(crud_PC_Escritorio.getContentPane());
+        crud_PC_Escritorio.getContentPane().setLayout(crud_PC_EscritorioLayout);
+        crud_PC_EscritorioLayout.setHorizontalGroup(
+            crud_PC_EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        crud_PCLayout.setVerticalGroup(
-            crud_PCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(crud_PCLayout.createSequentialGroup()
-                .addGap(137, 137, 137)
-                .addComponent(jButton3)
-                .addContainerGap(140, Short.MAX_VALUE))
+        crud_PC_EscritorioLayout.setVerticalGroup(
+            crud_PC_EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        crud_PC_Laptop.setPreferredSize(new java.awt.Dimension(415, 330));
+        crud_PC_Laptop.setResizable(false);
+        crud_PC_Laptop.setSize(new java.awt.Dimension(415, 330));
+
+        jPanel8.setMaximumSize(new java.awt.Dimension(415, 330));
+        jPanel8.setMinimumSize(new java.awt.Dimension(415, 330));
+        jPanel8.setPreferredSize(new java.awt.Dimension(415, 330));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setText("Agregar Laptop");
+        jLabel6.setToolTipText("");
+        jPanel8.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 210, 40));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setText("Host:");
+        jLabel7.setToolTipText("");
+        jPanel8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 20));
+        jPanel8.add(tf_host3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 320, -1));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setText("IP:");
+        jLabel8.setToolTipText("");
+        jPanel8.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 30, 20));
+        jPanel8.add(tf_host4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 340, -1));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel9.setText("Marca de Red:");
+        jLabel9.setToolTipText("");
+        jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 130, 20));
+        jPanel8.add(tf_host5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 240, -1));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel14.setText("Marca:");
+        jLabel14.setToolTipText("");
+        jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 60, 20));
+        jPanel8.add(tf_host9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 300, -1));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel15.setText("Definición de Pantalla:");
+        jLabel15.setToolTipText("");
+        jPanel8.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 200, 20));
+
+        tf_host10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_host10ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(tf_host10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 170, 30));
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel16.setText("¿Es de teclado RGB? ");
+        jLabel16.setToolTipText("");
+        jPanel8.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 210, 30));
+
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Si", "No" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList2);
+
+        jPanel8.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 60, 50));
+
+        bt_agregarLaptop.setText("Agregar");
+        bt_agregarLaptop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_agregarLaptopActionPerformed(evt);
+            }
+        });
+        jPanel8.add(bt_agregarLaptop, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, -1, -1));
+
+        javax.swing.GroupLayout crud_PC_LaptopLayout = new javax.swing.GroupLayout(crud_PC_Laptop.getContentPane());
+        crud_PC_Laptop.getContentPane().setLayout(crud_PC_LaptopLayout);
+        crud_PC_LaptopLayout.setHorizontalGroup(
+            crud_PC_LaptopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        crud_PC_LaptopLayout.setVerticalGroup(
+            crud_PC_LaptopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        crud_main.setMinimumSize(new java.awt.Dimension(400, 300));
+        crud_main.setPreferredSize(new java.awt.Dimension(700, 500));
+        crud_main.setResizable(false);
+        crud_main.setSize(new java.awt.Dimension(700, 500));
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(700, 500));
+        jPanel1.setMinimumSize(new java.awt.Dimension(700, 500));
+        jPanel1.setPreferredSize(new java.awt.Dimension(700, 500));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel18.setText("< C R U D >");
+        jLabel18.setToolTipText("");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 6, -1, -1));
+
+        bt_crear.setText("CREAR");
+        bt_crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_crearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(bt_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 49, 210, 38));
+
+        bt_listar.setText("LISTAR");
+        jPanel1.add(bt_listar, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 105, 210, 38));
+
+        bt_eliminar.setText("ELIMINAR");
+        jPanel1.add(bt_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 161, 210, 38));
+
+        bt_salir.setText("SALIR");
+        bt_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_salirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(bt_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 217, 210, 38));
+
+        javax.swing.GroupLayout crud_mainLayout = new javax.swing.GroupLayout(crud_main.getContentPane());
+        crud_main.getContentPane().setLayout(crud_mainLayout);
+        crud_mainLayout.setHorizontalGroup(
+            crud_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+        );
+        crud_mainLayout.setVerticalGroup(
+            crud_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+        );
+
+        crud_choose.setPreferredSize(new java.awt.Dimension(700, 500));
+        crud_choose.setResizable(false);
+        crud_choose.setSize(new java.awt.Dimension(700, 500));
+
+        jPanel5.setMaximumSize(new java.awt.Dimension(700, 500));
+        jPanel5.setMinimumSize(new java.awt.Dimension(700, 500));
+        jPanel5.setPreferredSize(new java.awt.Dimension(700, 500));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel19.setText("< C R U D >");
+        jLabel19.setToolTipText("");
+        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 6, -1, -1));
+
+        bt_PC_Escritorio.setText("PC de Escritorio");
+        bt_PC_Escritorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_PC_EscritorioActionPerformed(evt);
+            }
+        });
+        jPanel5.add(bt_PC_Escritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 210, 38));
+
+        bt_PC_Laptop.setText("Laptop");
+        bt_PC_Laptop.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_PC_LaptopMouseClicked(evt);
+            }
+        });
+        bt_PC_Laptop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_PC_LaptopActionPerformed(evt);
+            }
+        });
+        jPanel5.add(bt_PC_Laptop, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 210, 38));
+
+        javax.swing.GroupLayout crud_chooseLayout = new javax.swing.GroupLayout(crud_choose.getContentPane());
+        crud_choose.getContentPane().setLayout(crud_chooseLayout);
+        crud_chooseLayout.setHorizontalGroup(
+            crud_chooseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+        );
+        crud_chooseLayout.setVerticalGroup(
+            crud_chooseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(500, 500));
+        setResizable(false);
+        setSize(new java.awt.Dimension(500, 500));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 301, Short.MAX_VALUE)
-        );
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("INGRESAR A COMPUTADORA");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel20.setText("< B I E N V E N I D O >");
+        jLabel20.setToolTipText("");
+        jPanel6.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 6, -1, -1));
+
+        bt_ingresar.setText("INGRESAR A PC");
+        bt_ingresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bt_ingresarActionPerformed(evt);
             }
         });
+        jPanel6.add(bt_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 210, 38));
 
-        bt_crud.setText("CRUD PC");
-        bt_crud.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_crudActionPerformed(evt);
+        bt_crudPC.setText("CRUD PC");
+        bt_crudPC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_crudPCMouseClicked(evt);
             }
         });
+        bt_crudPC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_crudPCActionPerformed(evt);
+            }
+        });
+        jPanel6.add(bt_crudPC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 210, 38));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(112, 112, 112)
-                    .addComponent(bt_crud, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(119, Short.MAX_VALUE)))
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(249, Short.MAX_VALUE)
-                    .addComponent(bt_crud, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(64, 64, 64)))
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void bt_PC_EscritorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_PC_EscritorioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        crud_PC_Escritorio.setVisible(true);
+        crud_choose.setVisible(false);
+    }//GEN-LAST:event_bt_PC_EscritorioActionPerformed
 
-    private void bt_crudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_crudActionPerformed
+    private void bt_PC_LaptopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_PC_LaptopMouseClicked
         // TODO add your handling code here:
-        crud_PC.setVisible(true);
-    }//GEN-LAST:event_bt_crudActionPerformed
+    }//GEN-LAST:event_bt_PC_LaptopMouseClicked
+
+    private void bt_PC_LaptopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_PC_LaptopActionPerformed
+        // TODO add your handling code here:
+        crud_PC_Laptop.setVisible(true);
+        crud_choose.setVisible(false);
+    }//GEN-LAST:event_bt_PC_LaptopActionPerformed
+
+    private void bt_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_ingresarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_ingresarActionPerformed
+
+    private void bt_crudPCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_crudPCMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_crudPCMouseClicked
+
+    private void bt_crudPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_crudPCActionPerformed
+        // TODO add your handling code here:{
+        crud_main.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bt_crudPCActionPerformed
+
+    private void tf_host10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_host10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_host10ActionPerformed
+
+    private void bt_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_crearActionPerformed
+        // TODO add your handling code here:
+        crud_choose.setVisible(true);
+        crud_main.setVisible(false);
+    }//GEN-LAST:event_bt_crearActionPerformed
+
+    private void bt_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_salirActionPerformed
+        // TODO add your handling code here:
+        crud_main.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_bt_salirActionPerformed
+
+    private void bt_agregarEscritorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregarEscritorioActionPerformed
+        // TODO add your handling code here:
+        String host = tf_host.getText();
+        crud_PC_Escritorio.setVisible(false);
+        crud_main.setVisible(true);
+    }//GEN-LAST:event_bt_agregarEscritorioActionPerformed
+
+    private void bt_agregarLaptopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregarLaptopActionPerformed
+        // TODO add your handling code here:
+        crud_PC_Laptop.setVisible(false);
+        crud_main.setVisible(true);
+    }//GEN-LAST:event_bt_agregarLaptopActionPerformed
+
+    private void tf_hostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_hostActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_tf_hostActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,10 +492,57 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bt_crud;
-    private javax.swing.JFrame crud_PC;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton bt_PC_Escritorio;
+    private javax.swing.JButton bt_PC_Laptop;
+    private javax.swing.JButton bt_agregarEscritorio;
+    private javax.swing.JButton bt_agregarLaptop;
+    private javax.swing.JButton bt_crear;
+    private javax.swing.JButton bt_crudPC;
+    private javax.swing.JButton bt_eliminar;
+    private javax.swing.JButton bt_ingresar;
+    private javax.swing.JButton bt_listar;
+    private javax.swing.JButton bt_salir;
+    private javax.swing.JFrame crud_PC_Escritorio;
+    private javax.swing.JFrame crud_PC_Laptop;
+    private javax.swing.JFrame crud_choose;
+    private javax.swing.JFrame crud_main;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField tf_host;
+    private javax.swing.JTextField tf_host10;
+    private javax.swing.JTextField tf_host3;
+    private javax.swing.JTextField tf_host4;
+    private javax.swing.JTextField tf_host5;
+    private javax.swing.JTextField tf_host9;
+    private javax.swing.JTextField tf_ip;
+    private javax.swing.JTextField tf_marcaRed;
+    private javax.swing.JTextField tf_ram;
+    private javax.swing.JTextField tf_storage;
+    private javax.swing.JTextField tf_tipoStorage;
     // End of variables declaration//GEN-END:variables
 }
