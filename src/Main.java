@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
@@ -284,10 +285,10 @@ public class Main extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel18.setText("< C R U D >");
         jLabel18.setToolTipText("");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 6, -1, -1));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, -1));
 
         bt_crear.setText("CREAR");
         bt_crear.addActionListener(new java.awt.event.ActionListener() {
@@ -295,7 +296,7 @@ public class Main extends javax.swing.JFrame {
                 bt_crearActionPerformed(evt);
             }
         });
-        jPanel1.add(bt_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 49, 210, 38));
+        jPanel1.add(bt_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 220, 50));
 
         bt_listar.setText("LISTAR");
         bt_listar.addActionListener(new java.awt.event.ActionListener() {
@@ -303,7 +304,7 @@ public class Main extends javax.swing.JFrame {
                 bt_listarActionPerformed(evt);
             }
         });
-        jPanel1.add(bt_listar, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 105, 210, 38));
+        jPanel1.add(bt_listar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 220, 50));
 
         bt_eliminar.setText("ELIMINAR");
         bt_eliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -311,7 +312,7 @@ public class Main extends javax.swing.JFrame {
                 bt_eliminarActionPerformed(evt);
             }
         });
-        jPanel1.add(bt_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 161, 210, 38));
+        jPanel1.add(bt_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 220, 50));
 
         bt_salir.setText("SALIR");
         bt_salir.addActionListener(new java.awt.event.ActionListener() {
@@ -319,7 +320,7 @@ public class Main extends javax.swing.JFrame {
                 bt_salirActionPerformed(evt);
             }
         });
-        jPanel1.add(bt_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 217, 210, 38));
+        jPanel1.add(bt_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 220, 50));
 
         javax.swing.GroupLayout crud_mainLayout = new javax.swing.GroupLayout(crud_main.getContentPane());
         crud_main.getContentPane().setLayout(crud_mainLayout);
@@ -469,16 +470,21 @@ public class Main extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(500, 250));
+        setMinimumSize(new java.awt.Dimension(500, 250));
         setPreferredSize(new java.awt.Dimension(500, 500));
         setResizable(false);
-        setSize(new java.awt.Dimension(500, 500));
+        setSize(new java.awt.Dimension(500, 250));
 
+        jPanel6.setMaximumSize(new java.awt.Dimension(500, 250));
+        jPanel6.setMinimumSize(new java.awt.Dimension(500, 250));
+        jPanel6.setPreferredSize(new java.awt.Dimension(500, 250));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel20.setText("< B I E N V E N I D O >");
         jLabel20.setToolTipText("");
-        jPanel6.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 6, -1, -1));
+        jPanel6.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
 
         bt_ingresar.setText("INGRESAR A PC");
         bt_ingresar.addActionListener(new java.awt.event.ActionListener() {
@@ -486,7 +492,7 @@ public class Main extends javax.swing.JFrame {
                 bt_ingresarActionPerformed(evt);
             }
         });
-        jPanel6.add(bt_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 210, 38));
+        jPanel6.add(bt_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 220, 70));
 
         bt_crudPC.setText("CRUD PC");
         bt_crudPC.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -499,17 +505,17 @@ public class Main extends javax.swing.JFrame {
                 bt_crudPCActionPerformed(evt);
             }
         });
-        jPanel6.add(bt_crudPC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 210, 38));
+        jPanel6.add(bt_crudPC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 220, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -533,6 +539,38 @@ public class Main extends javax.swing.JFrame {
 
     private void bt_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_ingresarActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        boolean check = true;
+        do {
+            Scanner consola = new Scanner(System.in);
+            System.out.print("Ingrese una dirección IP: ");
+            String ip = consola.next();
+            int numLista = 0;
+            for (PC pc : listPC) {
+                if (ip.equals(pc.getIp())) {
+                } else {
+                    check = false;
+                    numLista++;
+                }
+            }
+            if (check == true) {
+                String opcion = "";
+                do {
+                    System.out.print(listPC.get(numLista).getHostName() + "#");
+                    opcion = consola.next();
+                    switch (opcion) {
+                        case "ping_":
+                            break;
+                        case "show":
+                            break;
+                        case "exit":
+                            check = false;
+                            break;
+                    }
+                } while (opcion != "exit");
+            }
+        } while (check == true);
+        this.setVisible(true);
     }//GEN-LAST:event_bt_ingresarActionPerformed
 
     private void bt_crudPCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_crudPCMouseClicked
