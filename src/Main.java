@@ -562,6 +562,8 @@ public class Main extends javax.swing.JFrame {
                         case "ping_":
                             break;
                         case "show":
+                            System.out.println(listPC.get(numLista).getIp());
+                            System.out.println(listPC.get(numLista).getMascaraRed());
                             break;
                         case "exit":
                             check = false;
