@@ -1,5 +1,7 @@
 
 import java.util.ArrayList;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /*
@@ -86,8 +88,9 @@ public class Main extends javax.swing.JFrame {
         crud_eliminar = new javax.swing.JFrame();
         jPanel3 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        lista_PC = new javax.swing.JList<>();
+        cb_listaEliminar = new javax.swing.JComboBox<>();
+        bt_Eliminar = new javax.swing.JButton();
+        bt_salirEliminar = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         bt_ingresar = new javax.swing.JButton();
@@ -435,9 +438,24 @@ public class Main extends javax.swing.JFrame {
         jLabel22.setToolTipText("");
         jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
 
-        jScrollPane4.setViewportView(lista_PC);
+        cb_listaEliminar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(cb_listaEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 330, 50));
 
-        jPanel3.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 440, -1));
+        bt_Eliminar.setText("ELIMINAR");
+        bt_Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_EliminarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(bt_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 150, 50));
+
+        bt_salirEliminar.setText("SALIR");
+        bt_salirEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_salirEliminarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(bt_salirEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 150, 50));
 
         javax.swing.GroupLayout crud_eliminarLayout = new javax.swing.GroupLayout(crud_eliminar.getContentPane());
         crud_eliminar.getContentPane().setLayout(crud_eliminarLayout);
@@ -636,10 +654,25 @@ public class Main extends javax.swing.JFrame {
 
     private void bt_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_eliminarActionPerformed
         // TODO add your handling code here:
-        for (PC pc : listPC) {
-            lista_PC.add(pc.toString());
-        }
+        DefaultListModel model = new DefaultListModel<String>();
+        model.addAll(listPC);
+        cb_listaEliminar.setModel((ComboBoxModel<String>) model);
     }//GEN-LAST:event_bt_eliminarActionPerformed
+
+    private void bt_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_EliminarActionPerformed
+        // TODO add your handling code here:
+        for (PC pc : listPC) {
+            if (cb_listaEliminar.getSelectedItem().equals(pc)) {
+                listPC.remove(pc);
+            }
+        }
+    }//GEN-LAST:event_bt_EliminarActionPerformed
+
+    private void bt_salirEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_salirEliminarActionPerformed
+        // TODO add your handling code here:
+        crud_eliminar.setVisible(false);
+        crud_main.setVisible(true);
+    }//GEN-LAST:event_bt_salirEliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -677,6 +710,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_Eliminar;
     private javax.swing.JButton bt_PC_Escritorio;
     private javax.swing.JButton bt_PC_Laptop;
     private javax.swing.JButton bt_agregarEscritorio;
@@ -687,7 +721,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton bt_ingresar;
     private javax.swing.JButton bt_listar;
     private javax.swing.JButton bt_salir;
+    private javax.swing.JButton bt_salirEliminar;
     private javax.swing.JButton bt_salirlLista;
+    private javax.swing.JComboBox<String> cb_listaEliminar;
     private javax.swing.JFrame crud_PC_Escritorio;
     private javax.swing.JFrame crud_PC_Laptop;
     private javax.swing.JFrame crud_choose;
@@ -724,8 +760,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JList<String> lista_PC;
     private javax.swing.JList<String> lista_RGB;
     private javax.swing.JList<String> lista_tarjeta;
     private javax.swing.JTextField tf_defPantalla;
