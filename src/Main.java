@@ -1,8 +1,11 @@
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Rui
@@ -14,7 +17,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
-            
+
     }
 
     /**
@@ -34,7 +37,7 @@ public class Main extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         tf_ip = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        tf_marcaRed = new javax.swing.JTextField();
+        tf_mascaraRed = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         tf_ram = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -43,24 +46,24 @@ public class Main extends javax.swing.JFrame {
         tf_tipoStorage = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        lista_tarjeta = new javax.swing.JList<>();
         bt_agregarEscritorio = new javax.swing.JButton();
         crud_PC_Laptop = new javax.swing.JFrame();
         jPanel8 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        tf_host3 = new javax.swing.JTextField();
+        tf_hostLaptop = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        tf_host4 = new javax.swing.JTextField();
+        tf_ipLaptop = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        tf_host5 = new javax.swing.JTextField();
+        tf_mascaraLaptop = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        tf_host9 = new javax.swing.JTextField();
+        tf_marca = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        tf_host10 = new javax.swing.JTextField();
+        tf_defPantalla = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        lista_RGB = new javax.swing.JList<>();
         bt_agregarLaptop = new javax.swing.JButton();
         crud_main = new javax.swing.JFrame();
         jPanel1 = new javax.swing.JPanel();
@@ -74,6 +77,17 @@ public class Main extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         bt_PC_Escritorio = new javax.swing.JButton();
         bt_PC_Laptop = new javax.swing.JButton();
+        crud_lista = new javax.swing.JFrame();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtArea_lista = new javax.swing.JTextArea();
+        jLabel21 = new javax.swing.JLabel();
+        bt_salirlLista = new javax.swing.JButton();
+        crud_eliminar = new javax.swing.JFrame();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        lista_PC = new javax.swing.JList<>();
         jPanel6 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         bt_ingresar = new javax.swing.JButton();
@@ -111,11 +125,11 @@ public class Main extends javax.swing.JFrame {
         jPanel7.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 30, 20));
         jPanel7.add(tf_ip, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 170, 30));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setText("Marca de Red:");
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Mascara de Red:");
         jLabel5.setToolTipText("");
         jPanel7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 130, 20));
-        jPanel7.add(tf_marcaRed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 250, -1));
+        jPanel7.add(tf_mascaraRed, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 260, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel10.setText("Capacidad de RAM:");
@@ -140,12 +154,12 @@ public class Main extends javax.swing.JFrame {
         jLabel13.setToolTipText("");
         jPanel7.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 190, -1));
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        lista_tarjeta.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Si", "No" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(lista_tarjeta);
 
         jPanel7.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 60, 50));
 
@@ -186,49 +200,55 @@ public class Main extends javax.swing.JFrame {
         jLabel7.setText("Host:");
         jLabel7.setToolTipText("");
         jPanel8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 20));
-        jPanel8.add(tf_host3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 320, -1));
+        jPanel8.add(tf_hostLaptop, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 320, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setText("IP:");
         jLabel8.setToolTipText("");
         jPanel8.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 30, 20));
-        jPanel8.add(tf_host4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 340, -1));
+        jPanel8.add(tf_ipLaptop, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 340, -1));
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel9.setText("Marca de Red:");
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setText("Mascara de Red:");
         jLabel9.setToolTipText("");
-        jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 130, 20));
-        jPanel8.add(tf_host5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 240, -1));
+        jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 110, 20));
+
+        tf_mascaraLaptop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_mascaraLaptopActionPerformed(evt);
+            }
+        });
+        jPanel8.add(tf_mascaraLaptop, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 260, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel14.setText("Marca:");
         jLabel14.setToolTipText("");
         jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 60, 20));
-        jPanel8.add(tf_host9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 300, -1));
+        jPanel8.add(tf_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 300, -1));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel15.setText("Definición de Pantalla:");
         jLabel15.setToolTipText("");
         jPanel8.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 200, 20));
 
-        tf_host10.addActionListener(new java.awt.event.ActionListener() {
+        tf_defPantalla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_host10ActionPerformed(evt);
+                tf_defPantallaActionPerformed(evt);
             }
         });
-        jPanel8.add(tf_host10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 170, 30));
+        jPanel8.add(tf_defPantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 170, 30));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel16.setText("¿Es de teclado RGB? ");
         jLabel16.setToolTipText("");
         jPanel8.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 210, 30));
 
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+        lista_RGB.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Si", "No" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList2);
+        jScrollPane2.setViewportView(lista_RGB);
 
         jPanel8.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 60, 50));
 
@@ -275,9 +295,19 @@ public class Main extends javax.swing.JFrame {
         jPanel1.add(bt_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 49, 210, 38));
 
         bt_listar.setText("LISTAR");
+        bt_listar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_listarActionPerformed(evt);
+            }
+        });
         jPanel1.add(bt_listar, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 105, 210, 38));
 
         bt_eliminar.setText("ELIMINAR");
+        bt_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_eliminarActionPerformed(evt);
+            }
+        });
         jPanel1.add(bt_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 161, 210, 38));
 
         bt_salir.setText("SALIR");
@@ -292,11 +322,11 @@ public class Main extends javax.swing.JFrame {
         crud_main.getContentPane().setLayout(crud_mainLayout);
         crud_mainLayout.setHorizontalGroup(
             crud_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         crud_mainLayout.setVerticalGroup(
             crud_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         crud_choose.setPreferredSize(new java.awt.Dimension(700, 500));
@@ -343,6 +373,81 @@ public class Main extends javax.swing.JFrame {
         crud_chooseLayout.setVerticalGroup(
             crud_chooseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+        );
+
+        crud_lista.setMaximumSize(new java.awt.Dimension(415, 330));
+        crud_lista.setMinimumSize(new java.awt.Dimension(415, 330));
+        crud_lista.setPreferredSize(new java.awt.Dimension(415, 330));
+        crud_lista.setResizable(false);
+
+        jPanel2.setMaximumSize(new java.awt.Dimension(415, 330));
+        jPanel2.setMinimumSize(new java.awt.Dimension(415, 330));
+        jPanel2.setPreferredSize(new java.awt.Dimension(415, 330));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtArea_lista.setColumns(20);
+        txtArea_lista.setRows(5);
+        jScrollPane3.setViewportView(txtArea_lista);
+
+        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel21.setText("< L I S T A D O >");
+        jLabel21.setToolTipText("");
+        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, -1, -1));
+
+        bt_salirlLista.setText("SALIR");
+        bt_salirlLista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_salirlListaMouseClicked(evt);
+            }
+        });
+        bt_salirlLista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_salirlListaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(bt_salirlLista, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 230, 38));
+
+        javax.swing.GroupLayout crud_listaLayout = new javax.swing.GroupLayout(crud_lista.getContentPane());
+        crud_lista.getContentPane().setLayout(crud_listaLayout);
+        crud_listaLayout.setHorizontalGroup(
+            crud_listaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        crud_listaLayout.setVerticalGroup(
+            crud_listaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        crud_eliminar.setMaximumSize(new java.awt.Dimension(700, 500));
+        crud_eliminar.setMinimumSize(new java.awt.Dimension(700, 500));
+        crud_eliminar.setPreferredSize(new java.awt.Dimension(700, 500));
+        crud_eliminar.setResizable(false);
+
+        jPanel3.setMaximumSize(new java.awt.Dimension(700, 500));
+        jPanel3.setMinimumSize(new java.awt.Dimension(700, 500));
+        jPanel3.setPreferredSize(new java.awt.Dimension(700, 500));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel22.setText("< E L I M I N A R >");
+        jLabel22.setToolTipText("");
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+
+        jScrollPane4.setViewportView(lista_PC);
+
+        jPanel3.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 440, -1));
+
+        javax.swing.GroupLayout crud_eliminarLayout = new javax.swing.GroupLayout(crud_eliminar.getContentPane());
+        crud_eliminar.getContentPane().setLayout(crud_eliminarLayout);
+        crud_eliminarLayout.setHorizontalGroup(
+            crud_eliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        crud_eliminarLayout.setVerticalGroup(
+            crud_eliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -422,9 +527,9 @@ public class Main extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_bt_crudPCActionPerformed
 
-    private void tf_host10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_host10ActionPerformed
+    private void tf_defPantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_defPantallaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_host10ActionPerformed
+    }//GEN-LAST:event_tf_defPantallaActionPerformed
 
     private void bt_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_crearActionPerformed
         // TODO add your handling code here:
@@ -440,21 +545,101 @@ public class Main extends javax.swing.JFrame {
 
     private void bt_agregarEscritorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregarEscritorioActionPerformed
         // TODO add your handling code here:
-        String host = tf_host.getText();
-        crud_PC_Escritorio.setVisible(false);
-        crud_main.setVisible(true);
+        boolean tarjetaGrafica = false;
+        String tarjeta = lista_tarjeta.getSelectedValue();
+        if (tarjeta.equals("Si")) {
+            tarjetaGrafica = true;
+        }
+        boolean sameIP = false;
+        for (PC pc : listPC) {
+            if (pc.getIp().equals(tf_ip.getText())) {
+                sameIP = true;
+            }
+        }
+        String mascaraTK[] = tf_mascaraLaptop.getText().split(".");
+        if (sameIP == false && (mascaraTK[0].equals("255") && mascaraTK[1].equals("255") && mascaraTK[2].equals("255")
+                && (mascaraTK[3].equals("192") || mascaraTK[3].equals("224") || mascaraTK[3].equals("240") || mascaraTK[3].equals("248") || mascaraTK[3].equals("252")
+                || mascaraTK[3].equals("254") || mascaraTK[3].equals("255")))) {
+            int ram = Integer.parseInt(tf_ram.getText());
+            int storage = Integer.parseInt(tf_storage.getText());
+            PC_Escritorio pc = new PC_Escritorio(ram, storage, tf_tipoStorage.getText(), tarjetaGrafica, tf_ip.getText(), tf_mascaraRed.getText(), tf_host.getText());
+            listPC.add(pc);
+            crud_PC_Escritorio.setVisible(false);
+            crud_main.setVisible(true);
+        } else {
+            tf_host.setText("");
+            tf_ip.setText("");
+            tf_mascaraRed.setText("");
+            tf_ram.setText("");
+            tf_storage.setText("");
+            tf_tipoStorage.setText("");
+        }
     }//GEN-LAST:event_bt_agregarEscritorioActionPerformed
 
     private void bt_agregarLaptopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregarLaptopActionPerformed
         // TODO add your handling code here:
-        crud_PC_Laptop.setVisible(false);
-        crud_main.setVisible(true);
+        boolean rgb = false;
+        String tarjeta = lista_tarjeta.getSelectedValue();
+        if (tarjeta.equals("Si")) {
+            rgb = true;
+        }
+        boolean sameIP = false;
+        for (PC pc : listPC) {
+            if (pc.getIp().equals(tf_ipLaptop.getText())) {
+                sameIP = true;
+            }
+        }
+        String mascaraTK[] = tf_mascaraLaptop.getText().split(".");
+        if (sameIP == false && (mascaraTK[0].equals("255") && mascaraTK[1].equals("255") && mascaraTK[2].equals("255")
+                && (mascaraTK[3].equals("192") || mascaraTK[3].equals("224") || mascaraTK[3].equals("240") || mascaraTK[3].equals("248") || mascaraTK[3].equals("252")
+                || mascaraTK[3].equals("254") || mascaraTK[3].equals("255")))) {
+            Laptop laptop = new Laptop(tf_marca.getText(), tf_defPantalla.getText(), rgb, tf_ipLaptop.getText(), tf_mascaraLaptop.getText(), tf_hostLaptop.getText());
+            listPC.add(laptop);
+            crud_PC_Laptop.setVisible(false);
+            crud_main.setVisible(true);
+        } else {
+            tf_hostLaptop.setText("");
+            tf_ipLaptop.setText("");
+            tf_mascaraLaptop.setText("");
+            tf_marca.setText("");
+            tf_defPantalla.setText("");
+
+        }
+
     }//GEN-LAST:event_bt_agregarLaptopActionPerformed
 
     private void tf_hostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_hostActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_tf_hostActionPerformed
+
+    private void tf_mascaraLaptopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_mascaraLaptopActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_mascaraLaptopActionPerformed
+
+    private void bt_listarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_listarActionPerformed
+        // TODO add your handling code here:
+        crud_lista.setVisible(true);
+        crud_main.setVisible(false);
+        txtArea_lista.setText(listPC.toString());
+    }//GEN-LAST:event_bt_listarActionPerformed
+
+    private void bt_salirlListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_salirlListaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_salirlListaActionPerformed
+
+    private void bt_salirlListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_salirlListaMouseClicked
+        // TODO add your handling code here:
+        crud_lista.setVisible(false);
+        crud_main.setVisible(true);
+    }//GEN-LAST:event_bt_salirlListaMouseClicked
+
+    private void bt_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_eliminarActionPerformed
+        // TODO add your handling code here:
+        for (PC pc : listPC) {
+            lista_PC.add(pc.toString());
+        }
+    }//GEN-LAST:event_bt_eliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -502,9 +687,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton bt_ingresar;
     private javax.swing.JButton bt_listar;
     private javax.swing.JButton bt_salir;
+    private javax.swing.JButton bt_salirlLista;
     private javax.swing.JFrame crud_PC_Escritorio;
     private javax.swing.JFrame crud_PC_Laptop;
     private javax.swing.JFrame crud_choose;
+    private javax.swing.JFrame crud_eliminar;
+    private javax.swing.JFrame crud_lista;
     private javax.swing.JFrame crud_main;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -517,6 +705,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -524,25 +714,32 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JList<String> lista_PC;
+    private javax.swing.JList<String> lista_RGB;
+    private javax.swing.JList<String> lista_tarjeta;
+    private javax.swing.JTextField tf_defPantalla;
     private javax.swing.JTextField tf_host;
-    private javax.swing.JTextField tf_host10;
-    private javax.swing.JTextField tf_host3;
-    private javax.swing.JTextField tf_host4;
-    private javax.swing.JTextField tf_host5;
-    private javax.swing.JTextField tf_host9;
+    private javax.swing.JTextField tf_hostLaptop;
     private javax.swing.JTextField tf_ip;
-    private javax.swing.JTextField tf_marcaRed;
+    private javax.swing.JTextField tf_ipLaptop;
+    private javax.swing.JTextField tf_marca;
+    private javax.swing.JTextField tf_mascaraLaptop;
+    private javax.swing.JTextField tf_mascaraRed;
     private javax.swing.JTextField tf_ram;
     private javax.swing.JTextField tf_storage;
     private javax.swing.JTextField tf_tipoStorage;
+    private javax.swing.JTextArea txtArea_lista;
     // End of variables declaration//GEN-END:variables
+    ArrayList<PC> listPC = new ArrayList();
 }
